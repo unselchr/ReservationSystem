@@ -83,7 +83,7 @@
 		<footer class="footer">
 			<div class="container">
 				<p>
-					<a href="/api/tables">API Table Link</a> |
+					<a href="/api/Tables">API Table Link</a> |
 					<a href="/api/waitlist">API Wait List</a>
 				</p>
 			</div>
@@ -124,7 +124,7 @@
 		// We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
 		var currentURL = window.location.origin;
 
-		$.post(currentURL + "/api/tables", newReservation,
+		$.post(currentURL + "/api/Tables", newReservation,
 			function (data) {
 
 				// If a table is available... tell user they are booked.
