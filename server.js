@@ -7,7 +7,7 @@ var express = require("express");
 // Set up express
 
 var app = express();
-PORT = process.env.port || 3000;
+PORT = process.env.PORT || 3000;
 
 
 
