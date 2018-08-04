@@ -53,6 +53,13 @@ app.post("/newRes", function(req, res ){
     // RegEx possibly
     reservations.push(reservation);
     res.json(reservation);
+    if(reservations.length<=5){
+        res.data=true;
+        console.log(res.data);
+    }
+    else{
+        res.data=false;
+    }
     console.log(reservations);
 })
  
