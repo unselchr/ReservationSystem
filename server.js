@@ -53,6 +53,13 @@ app.post("/newRes", function(req, res ){
     // RegEx possibly
     reservations.push(reservation);
     res.json(reservation);
+    if(reservations.length<=5){
+        res.data=true;
+        console.log(res.data);
+    }
+    else{
+        res.data=false;
+    }
     console.log(reservations);
 })
  
@@ -67,6 +74,7 @@ app.get ("/viewTables", function ( req, res) {
 })
 app.get("/waitlist",function(req,res){
     var waitlist=[];
+
     for(var i=5;i<reservations.length;i++){
         waitlist.push(reservations[i]);
     }
