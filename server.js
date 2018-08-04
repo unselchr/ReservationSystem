@@ -53,6 +53,7 @@ app.post("/newRes", function(req, res ){
     // RegEx possibly
     reservations.push(reservation);
     res.json(reservation);
+    console.log(reservations);
 })
  
 
