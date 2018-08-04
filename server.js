@@ -52,12 +52,11 @@ app.post("/newRes", function(req, res ){
     var reservation = req.body;
     // RegEx possibly
     reservations.push(reservation);
-    res.json(reservation);
     if(reservations.length<=5){
-        req.body=true;
+        res.send(true);
     }
     else{
-        req.body=false;
+        res.send(false);
     }
     //console.log(reservations);
 })
