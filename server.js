@@ -67,11 +67,19 @@ app.get ("/viewTables", function ( req, res) {
 })
 app.get("/waitlist",function(req,res){
     var waitlist=[];
+
     for(var i=5;i<reservations.length;i++){
-        tables.push(reservations[i]);
+        waitlist.push(reservations[i]);
     }
 
     res.json(waitlist);
+<<<<<<< HEAD
+=======
+})
+app.post("/clear",function(req,res){
+    console.log("clearing");
+    reservations=[];
+>>>>>>> 59df6b87bf8f50dfc2c9ffdff09a133978b6e4d5
 })
 // Listener
 
