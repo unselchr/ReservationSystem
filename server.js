@@ -53,6 +53,13 @@ app.post("/newRes", function(req, res ){
     // RegEx possibly
     reservations.push(reservation);
     res.json(reservation);
+    if(reservations.length<=5){
+        res.data=true;
+        console.log(res.data);
+    }
+    else{
+        res.data=false;
+    }
     console.log(reservations);
 })
  
@@ -77,6 +84,10 @@ app.get("/waitlist",function(req,res){
 app.post("/clear",function(req,res){
     console.log("clearing");
     reservations=[];
+<<<<<<< HEAD
+=======
+>>>>>>> 59df6b87bf8f50dfc2c9ffdff09a133978b6e4d5
+>>>>>>> 3a5f3d8f8baa4242ebd5fae9be700d9476bcec98
 })
 // Listener
 
