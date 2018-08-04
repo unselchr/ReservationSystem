@@ -57,11 +57,22 @@ app.post("/newRes", function(req, res ){
 })
  
 app.get ("/viewTables", function ( req, res) {
-    console.log(res.json(reservations));
-    res.json(reservations);
+    var tables=[];
+    for(var i=0;i<5&&i<reservations.length;i++){
+        tables.push(reservations[i]);
+    }
+    
+    res.json(tables);
     
 })
+app.get("/waitlist",function(req,res){
+    var waitlist=[];
+    for(var i=5;i<reservations.length;i++){
+        tables.push(reservations[i]);
+    }
 
+    res.json(tables);
+})
 // Listener
 
 app.listen(PORT, function(){
