@@ -67,11 +67,12 @@ app.get ("/viewTables", function ( req, res) {
 })
 app.get("/waitlist",function(req,res){
     var waitlist=[];
+
     for(var i=5;i<reservations.length;i++){
         waitlist.push(reservations[i]);
     }
 
-    res.json(tables);
+    res.json(waitlist);
 })
 // Listener
 
