@@ -80,13 +80,6 @@ app.get("/waitlist",function(req,res){
     }
 
     res.json(waitlist);
-<<<<<<< HEAD
-=======
-})
-app.post("/clear",function(req,res){
-    console.log("clearing");
-    reservations=[];
->>>>>>> 59df6b87bf8f50dfc2c9ffdff09a133978b6e4d5
 })
 // Listener
 
