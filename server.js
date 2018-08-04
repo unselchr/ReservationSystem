@@ -85,9 +85,12 @@ app.post("/clear",function(req,res){
     console.log("clearing");
     reservations=[];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 59df6b87bf8f50dfc2c9ffdff09a133978b6e4d5
 >>>>>>> 3a5f3d8f8baa4242ebd5fae9be700d9476bcec98
+=======
+>>>>>>> 2588298eed2c6e9901fae416f0efe08fd0528200
 })
 // Listener
 
