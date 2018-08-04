@@ -68,7 +68,7 @@
 				<p>
 					<a href="#" id="clear">Clear Table</a> |
 					<a href="/Table">API Table Link</a> |
-					<a href="waitlist">API Wait List</a>
+					<a href="/viewTables">API Wait List</a>
 				</p>
 			</div>
 		</footer>
@@ -91,7 +91,7 @@
 		var currentURL = window.location.origin;
 
 		// The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
-		$.ajax({ url: currentURL + "viewTables", method: "GET" })
+		$.ajax({ url: currentURL + "/viewTables", method: "GET" })
 			.done(function (tableData) {
 
 				// Here we are logging the URL so we have access to it for troubleshooting
@@ -122,14 +122,15 @@
 	}
 
 	function runWaitListQuery() {
-
 		// Here we get the location of the root page.
 		// We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
 		var currentURL = window.location.origin;
+		console.log("asking for table data");
 
 		// The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
-		$.ajax({ url: currentURL + "waitlist", method: "GET" })
+		$.ajax({ url: currentURL + "/waitlist", method: "GET" })
 			.done(function (waitlistData) {
+				console.log("got table data");
 
 				// Here we are logging the URL so we have access to it for troubleshooting
 				console.log("------------------------------------");
@@ -176,8 +177,11 @@
 
 	// Run Queries!
 	// ==========================================
-	runTableQuery();
-	runWaitListQuery();
+	$(document).on("ready",function(){
+		runTableQuery();
+		runWaitListQuery();
+
+	})
 
 
 </script>

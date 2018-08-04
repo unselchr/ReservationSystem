@@ -33,19 +33,19 @@ var reservations = [];
 // Routes
 
 app.get("/",function(req, res){
-    res.sendfile(__dirname + "/index.html");
+    res.sendFile(__dirname + "/index.html");
 })
 
 app.get("/index",function(req, res){
-    res.sendfile(__dirname + "/index.html");
+    res.sendFile(__dirname + "/index.html");
 })
 
 app.get("/Table",function(req, res){
-    res.sendfile(__dirname + "/Table.html");
+    res.sendFile(__dirname + "/Table.html");
 })
 
 app.get("/Reservations",function(req, res){
-    res.sendfile(__dirname + "/Reservations.html");
+    res.sendFile(__dirname + "/Reservations.html");
 })
 
 app.post("/newRes", function(req, res ){
@@ -57,7 +57,9 @@ app.post("/newRes", function(req, res ){
 })
  
 app.get ("/viewTables", function ( req, res) {
-    return res.json(reservations);
+    console.log(res.json(reservations));
+    res.json(reservations);
+    
 })
 
 // Listener
