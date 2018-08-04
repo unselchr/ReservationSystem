@@ -54,13 +54,12 @@ app.post("/newRes", function(req, res ){
     reservations.push(reservation);
     res.json(reservation);
     if(reservations.length<=5){
-        res.data=true;
-        console.log(res.data);
+        req.body=true;
     }
     else{
-        res.data=false;
+        req.body=false;
     }
-    console.log(reservations);
+    //console.log(reservations);
 })
  
 app.get ("/viewTables", function ( req, res) {
