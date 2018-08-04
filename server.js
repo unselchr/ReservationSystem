@@ -21,10 +21,10 @@ app.use(bodyParser.json());
 
 // Data Objects
 
-var reservations = {
+var reservations = [];
 
 
-}
+
 
 
 
@@ -48,6 +48,13 @@ app.get("/Reservations",function(req, res){
     res.sendfile(__dirname + "/Reservations.html");
 })
 
+app.post("/newRes", function(req, res ){
+    var reservation = req.body;
+    // RegEx possibly
+    reservations.push(reservation);
+    res.json(reservation);
+})
+ 
 
 
 // Listener
