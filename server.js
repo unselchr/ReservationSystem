@@ -71,7 +71,7 @@ app.get("/waitlist",function(req,res){
         waitlist.push(reservations[i]);
     }
 
-    res.json(tables);
+    res.json(waitlist);
 })
 // Listener
 
