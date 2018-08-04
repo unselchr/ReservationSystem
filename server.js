@@ -56,7 +56,9 @@ app.post("/newRes", function(req, res ){
     console.log(reservations);
 })
  
-
+app.get ("/viewTables", function ( req, res) {
+    return res.json(reservations);
+})
 
 // Listener
 
